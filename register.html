@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Create a Legion account.">
+    <title>Legion | Register</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <a class="brand" href="index.html"><img src="assets/logo.png" alt="" width="42"height="42"><span>Legion</span></a>
+        <div class="header-actions"><a class="button button-quiet" href="index.html">Back to home</a><aclass="button button-small" href="login.html">Sign in</a>
+        </div>
+    </header>
+    <main class="auth-page">
+
+        <section class="auth-card register-card">
+
+            <div class="dialog-mark"><img src="assets/logo.png" alt="" width="58" height="58"></div>
+
+            <p class="eyebrow">Start with clarity</p>
+
+            <h1>Create your account.</h1>
+
+            <p class="dialog-copy">Bring your health signals and care conversations together.</p>
+
+            <form id="register-form">
+                <div class="form-two-col">
+                    <div><label for="first-name">First name</label><input id="first-name" type="text" required placeholder="Jane">
+                    </div>
+                    <div><label for="last-name">Last name</label><input id="last-name" type="text" required placeholder="Doe">
+                    </div>
+                </div><label for="register-email">Email address</label><input id="register-email" type="email" required placeholder="jane@example.com">
+
+                    <label for="register-password">Create a password</label><input id="register-password" type="password" required minlength="8" placeholder="At least 8 characters">
+
+                    <label class="check-label"><input type="checkbox" required> I agree to the terms and privacy policy.</label>
+
+                    
+                <button class="button full-width" type="submit"> <a href="index.html">Create  account</a>  <span aria-hidden="true">&#8594;</span></button>
+
+                <p class="form-status" id="register-status" role="status"></p>
+
+            </form>
+
+            <p class="auth-footnote">Already have an account? <a href="login.html">Sign in</a></p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

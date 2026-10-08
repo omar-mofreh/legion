@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Sign in to Legion.">
+    <title>Legion | Sign in</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <a class="brand" href="index.html"><img src="assets/logo.png" alt="" width="42" height="42"><span>Legion</span></a>
+
+        <div class="header-actions"><a class="button button-quiet" href="index.html">Back to home</a><a class="button button-small" href="register.html">Create account</a>
+        </div>
+    </header>
+
+    <main class="auth-page">
+
+        <section class="auth-card">
+
+            <div class="dialog-mark"><img src="assets/logo.png" alt="" width="58" height="58"></div>
+
+            <p class="eyebrow">Secure workspace</p>
+
+            <h1>Sign in to Legion</h1>
+
+
+            <p class="dialog-copy">Access your health snapshot and care conversations.</p>
+         
+            <form id="login-form">
+                <label for="login-email">Email or health ID</label>
+                <input id="login-email" type="text"required placeholder="you@example.com">
+                <label for="login-password">Password</label>
+               
+                <div class="password-wrap">
+                    <input id="login-password" type="password" required placeholder="Your password">
+                    <button type="button" id="toggle-password" aria-label="Show password">Show</button>   
+                </div>
+                
+                    <button class="button full-width" type="submit"> <a href="index.html"> Sign in </a>  <span aria-hidden="true">&#8594;</span> </button>
+              
+                        <p class="form-status" id="login-status" role="status"></p>
+          
+            </form>
+            <p class="auth-footnote">New to Legion? <a href="register.html">Create your account</a></p>
+            
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_blank" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-primary-container":"#94d3fc","secondary-fixed":"#72fad1","primary-container":"#0a5c80","surface-container":"#e5eeff","on-primary":"#ffffff","on-tertiary-container":"#b4ccff","on-primary-fixed-variant":"#004c6b","tertiary-fixed":"#d7e2ff","surface-container-high":"#dce9ff","on-tertiary-fixed":"#001b3f","on-background":"#0b1c30","background":"#f8f9ff","on-surface":"#0b1c30","primary-fixed":"#c6e7ff","inverse-on-surface":"#eaf1ff","surface-container-lowest":"#ffffff","on-error-container":"#93000a","surface-tint":"#1b6589","surface-variant":"#d3e4fe","surface-container-low":"#eff4ff","on-tertiary":"#ffffff","primary":"#004460","error-container":"#ffdad6","tertiary-container":"#0054ae","on-surface-variant":"#40484e","surface-dim":"#cbdbf5","secondary-fixed-dim":"#51ddb5","on-secondary-fixed-variant":"#00513f","primary-fixed-dim":"#8fcef7","on-secondary-fixed":"#002118","outline-variant":"#c0c7ce","surface-bright":"#f8f9ff","inverse-surface":"#213145","secondary-container":"#6ef7ce","tertiary":"#003d82","on-secondary-container":"#007058","surface":"#f8f9ff","tertiary-fixed-dim":"#abc7ff","error":"#ba1a1a","surface-container-highest":"#d3e4fe","on-secondary":"#ffffff","secondary":"#006b54","inverse-primary":"#8fcef7","on-tertiary-fixed-variant":"#004590","on-primary-fixed":"#001e2d","outline":"#70787e","on-error":"#ffffff"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"margin-tablet":"2rem","space-md":"1rem","space-sm":"0.5rem",margin:"1rem","margin-desktop":"3rem","space-3xl":"4rem","gutter-tablet":"1.5rem",gutter:"1rem","space-2xs":"0.125rem","space-2xl":"3rem","space-xl":"2rem","gutter-desktop":"2rem","space-xs":"0.25rem","space-lg":"1.5rem"},fontFamily:{"metric-display":["Plus Jakarta Sans"],"display-mobile":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"title-md":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"]},fontSize:{"metric-display":["2.5rem",{lineHeight:"2.75rem",letterSpacing:"-0.03em",fontWeight:"700"}],"display-mobile":["2.25rem",{lineHeight:"2.75rem",letterSpacing:"-0.02em",fontWeight:"700"}],"display-lg":["3rem",{lineHeight:"3.5rem",letterSpacing:"-0.025em",fontWeight:"700"}],"body-sm":["0.8125rem",{lineHeight:"1.25rem",letterSpacing:"0.01em",fontWeight:"400"}],"body-lg":["1.125rem",{lineHeight:"1.75rem",letterSpacing:"0",fontWeight:"400"}],"body-md":["0.9375rem",{lineHeight:"1.5rem",letterSpacing:"0",fontWeight:"400"}],"title-md":["1rem",{lineHeight:"1.5rem",letterSpacing:"0",fontWeight:"600"}],"headline-lg-mobile":["1.5rem",{lineHeight:"2rem",letterSpacing:"-0.015em",fontWeight:"600"}],"headline-lg":["2rem",{lineHeight:"2.5rem",letterSpacing:"-0.02em",fontWeight:"600"}],"label-md":["0.875rem",{lineHeight:"1.25rem",letterSpacing:"0.01em",fontWeight:"600"}],"headline-sm":["1.25rem",{lineHeight:"1.75rem",letterSpacing:"-0.01em",fontWeight:"600"}],"label-sm":["0.75rem",{lineHeight:"1rem",letterSpacing:"0.03em",fontWeight:"600"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen flex flex-col justify-center items-center"><main class="w-full flex-1 flex flex-col justify-center items-center p-margin md:p-margin-tablet"><div class="flex flex-col w-full">
+<div class="w-full max-w-7xl mx-auto py-space-md lg:py-space-xl">
+<!-- Breadcrumb / Overline Header -->
+<div class="flex items-center justify-between mb-space-lg px-2">
+<div class="flex items-center space-x-space-sm">
+<div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-on-primary shadow-sm">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 48 48">
+<path d="M24 40C12 28 8 20 8 14a8 8 0 0116-2 8 8 0 0116 2c0 6-4 14-16 26z" fill="none" stroke="currentColor"></path>
+<path d="M19 19h10M24 14v10" stroke="currentColor" stroke-width="3.5"></path>
+<path d="M22 28l3-4 3 6 4-3" stroke="var(--tw-colors-secondary-container)" stroke-width="2.5"></path>
+</svg>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary tracking-tight">CuraHealth<span class="text-secondary font-bold">.</span></span>
+<span class="font-label-sm text-label-sm text-outline tracking-wider uppercase">Clinical Biometrics Network</span>
+</div>
+</div>
+<div class="hidden sm:flex items-center space-x-space-sm text-on-surface-variant font-label-md text-label-md">
+<span>Already a member?</span>
+<a class="text-primary font-bold hover:underline inline-flex items-center" href="#signin">
+          Sign In
+          <span class="material-symbols-outlined text-base ml-1">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Main Registration Shell: 12-Column Split Bento Architecture -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-stretch">
+<!-- LEFT PANEL: Trust, Biometric Features & Clinical Proof (5 cols) -->
+<div class="lg:col-span-5 flex flex-col justify-between rounded-xl bg-surface-container-low p-space-lg lg:p-space-xl shadow-sm relative overflow-hidden">
+<!-- Ambient Medical Gradient Backdrop Blob -->
+<div class="absolute -top-24 -left-24 w-80 h-80 rounded-full bg-secondary-fixed/25 blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-24 -right-24 w-72 h-72 rounded-full bg-primary-fixed/30 blur-3xl pointer-events-none"></div>
+<div class="relative z-10 space-y-space-xl">
+<!-- Top Badge & Proposition -->
+<div class="space-y-space-md">
+<div class="inline-flex items-center space-x-2 px-space-sm py-space-xs rounded-full bg-surface-container text-primary font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-semibold tracking-wide">ENTERPRISE TELEMETRY 4.2</span>
+</div>
+<h1 class="font-display-mobile lg:font-display-lg text-display-mobile lg:text-display-lg text-primary tracking-tight leading-tight">
+              Predictive health intelligence, synchronized.
+            </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+              Unify high-fidelity diagnostic biometric streams with board-certified specialty clinics. Real-time alerting, verifiable patient agency.
+            </p>
+</div>
+<!-- Feature Cards Mosaic -->
+<div class="space-y-space-md">
+<!-- Feature Item 1 -->
+<div class="p-space-md rounded-lg bg-surface-container-lowest shadow-sm flex items-start space-x-space-md hover:shadow-md transition-all">
+<div class="w-11 h-11 rounded-lg bg-primary-container/10 text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-2xl">vital_signs</span>
+</div>
+<div class="space-y-1">
+<div class="flex items-center justify-between">
+<h3 class="font-title-md text-title-md text-on-surface">Continuous Biometric Sync</h3>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-container/30 text-on-secondary-container font-semibold">99.98% Latency SLA</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Native hooks for Apple HealthKit, Garmin Health API, and Dexcom G6/G7 continuous glucose tracking.
+                </p>
+</div>
+</div>
+<!-- Feature Item 2 -->
+<div class="p-space-md rounded-lg bg-surface-container-lowest shadow-sm flex items-start space-x-space-md hover:shadow-md transition-all">
+<div class="w-11 h-11 rounded-lg bg-secondary-container/20 text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-2xl">neurology</span>
+</div>
+<div class="space-y-1">
+<h3 class="font-title-md text-title-md text-on-surface">24/7 AI-Assisted Triage</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Immediate Bayesian symptom mapping cross-referenced with your basal metabolic and cardiac baselines.
+                </p>
+</div>
+</div>
+<!-- Feature Item 3 -->
+<div class="p-space-md rounded-lg bg-surface-container-lowest shadow-sm flex items-start space-x-space-md hover:shadow-md transition-all">
+<div class="w-11 h-11 rounded-lg bg-tertiary-container/10 text-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-2xl">verified_user</span>
+</div>
+<div class="space-y-1">
+<h3 class="font-title-md text-title-md text-on-surface">450+ Accredited Specialists</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Encrypted clinical sessions with instant electronic health record (EHR) cross-dispatch.
+                </p>
+</div>
+</div>
+</div>
+<!-- Micro Telemetry Sparkline Visual Component -->
+<div class="p-space-md rounded-lg bg-surface-container-lowest shadow-sm space-y-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-primary text-base" style="font-variation-settings: 'FILL' 1;">ecg_heart</span>
+<span class="font-label-sm text-label-sm text-primary">Live Synthetic Baseline (Resting)</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold">64 BPM · Sinus Normal</span>
+</div>
+<div class="w-full h-10 flex items-center">
+<svg class="w-full h-8 text-primary" fill="none" viewbox="0 0 340 40">
+<path d="M0,20 L60,20 L75,18 L85,20 L95,6 L105,34 L115,10 L125,24 L135,20 L200,20 L212,18 L220,5 L228,35 L238,12 L246,22 L254,20 L340,20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"></path>
+</svg>
+</div>
+</div>
+</div>
+<!-- Compliance Badges Footer -->
+<div class="relative z-10 pt-space-lg border-t-0 mt-space-lg">
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="flex items-center space-x-1.5 px-space-sm py-space-xs rounded bg-surface-container-high/60 text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-base text-secondary">lock</span>
+<span>HIPAA Tier 1</span>
+</div>
+<div class="flex items-center space-x-1.5 px-space-sm py-space-xs rounded bg-surface-container-high/60 text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-base text-primary">shield</span>
+<span>GDPR Certified</span>
+</div>
+<div class="flex items-center space-x-1.5 px-space-sm py-space-xs rounded bg-surface-container-high/60 text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-base text-tertiary">dataset</span>
+<span>FHIR HL7 Rel 4</span>
+</div>
+</div>
+<div class="mt-space-md flex items-center space-x-space-sm">
+<div class="flex -space-x-2 overflow-hidden">
+<div class="inline-block h-8 w-8 rounded-full ring-2 ring-surface-container-lowest bg-primary-container text-on-primary flex items-center justify-center font-bold text-xs">Dr.M</div>
+<div class="inline-block h-8 w-8 rounded-full ring-2 ring-surface-container-lowest bg-secondary text-on-secondary flex items-center justify-center font-bold text-xs">RN</div>
+<div class="inline-block h-8 w-8 rounded-full ring-2 ring-surface-container-lowest bg-tertiary text-on-tertiary flex items-center justify-center font-bold text-xs">MD</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">
+              "CuraHealth reduced our critical telemetry alert latency by 68%."
+            </p>
+</div>
+</div>
+</div>
+<!-- RIGHT PANEL: Registration Form (7 cols) -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-xl p-space-lg lg:p-space-xl shadow-md flex flex-col justify-between">
+<div>
+<!-- Header & Progress Status -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-space-md border-b-0 space-y-2 sm:space-y-0">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">Create Clinical Account</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Step 1 of 2: Telemetry ID &amp; Cryptographic Key</p>
+</div>
+<div class="flex items-center space-x-2">
+<span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-primary text-on-primary font-bold text-xs">1</span>
+<div class="w-8 h-1 rounded-full bg-primary"></div>
+<span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-surface-container text-on-surface-variant font-bold text-xs">2</span>
+</div>
+</div>
+<!-- Account Type Switcher Tabs -->
+<div class="my-space-md">
+<div class="grid grid-cols-2 p-1 rounded-lg bg-surface-container-low max-w-md">
+<button class="py-2 text-center rounded-lg font-label-md text-label-md transition-all bg-surface-container-lowest text-primary shadow-sm font-bold" id="tab-patient" type="button">
+                Individual / Patient
+              </button>
+<button class="py-2 text-center rounded-lg font-label-md text-label-md transition-all text-on-surface-variant hover:text-on-surface" id="tab-clinician" type="button">
+                Physician / Clinic Team
+              </button>
+</div>
+</div>
+<!-- Form Fields Container -->
+<form class="space-y-space-md mt-space-md" id="cura-register-form">
+<!-- Dual Name Field -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="space-y-1">
+<label class="block font-label-sm text-label-sm text-on-surface-variant" for="first-name">
+                  First Name <span class="text-error">*</span>
+</label>
+<div class="relative">
+<input class="w-full h-12 px-space-md rounded bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-sm placeholder:text-outline-variant transition-all" id="first-name" name="firstName" placeholder="Eleanor" required="" type="text"/>
+</div>
+</div>
+<div class="space-y-1">
+<label class="block font-label-sm text-label-sm text-on-surface-variant" for="last-name">
+                  Last Name <span class="text-error">*</span>
+</label>
+<div class="relative">
+<input class="w-full h-12 px-space-md rounded bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-sm placeholder:text-outline-variant transition-all" id="last-name" name="lastName" placeholder="Vance" required="" type="text"/>
+</div>
+</div>
+</div>
+<!-- Email & Telemetry Dispatch Phone -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="space-y-1">
+<label class="block font-label-sm text-label-sm text-on-surface-variant" for="work-email">
+                  Primary Medical / Login Email <span class="text-error">*</span>
+</label>
+<div class="relative">
+<input class="w-full h-12 pl-space-md pr-10 rounded bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-sm placeholder:text-outline-variant transition-all" id="work-email" name="email" placeholder="e.vance@curahealth.network" required="" type="email"/>
+<span class="material-symbols-outlined absolute right-3 top-3 text-outline-variant text-xl">alternate_email</span>
+</div>
+</div>
+<div class="space-y-1">
+<label class="block font-label-sm text-label-sm text-on-surface-variant" for="vital-phone">
+                  Critical Alert SMS Telemetry Phone <span class="text-error">*</span>
+</label>
+<div class="relative">
+<input class="w-full h-12 pl-space-md pr-10 rounded bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-sm placeholder:text-outline-variant transition-all" id="vital-phone" name="phone" placeholder="+1 (555) 942-8800" required="" type="tel"/>
+<span class="material-symbols-outlined absolute right-3 top-3 text-outline-variant text-xl">notifications_active</span>
+</div>
+</div>
+</div>
+<!-- Passwords & Strength Evaluator -->
+<div class="space-y-space-sm pt-1">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="space-y-1">
+<div class="flex items-center justify-between">
+<label class="block font-label-sm text-label-sm text-on-surface-variant" for="password-input">
+                      HIPAA Vault Key (Password) <span class="text-error">*</span>
+</label>
+</div>
+<div class="relative">
+<input class="w-full h-12 pl-space-md pr-10 rounded bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-sm transition-all" id="password-input" name="password" placeholder="••••••••••••" required="" type="password"/>
+<button class="absolute right-3 top-3 text-outline-variant hover:text-primary transition-colors focus:outline-none" id="toggle-password" type="button">
+<span class="material-symbols-outlined text-xl">visibility</span>
+</button>
+</div>
+</div>
+<div class="space-y-1">
+<label class="block font-label-sm text-label-sm text-on-surface-variant" for="confirm-password-input">
+                    Confirm Key Verification <span class="text-error">*</span>
+</label>
+<div class="relative">
+<input class="w-full h-12 pl-space-md pr-10 rounded bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-sm transition-all" id="confirm-password-input" name="confirmPassword" placeholder="••••••••••••" required="" type="password"/>
+<span class="material-symbols-outlined absolute right-3 top-3 text-outline-variant text-xl" id="match-indicator">lock</span>
+</div>
+</div>
+</div>
+<!-- Password Strength Meter (Visual Component) -->
+<div class="p-space-sm rounded-lg bg-surface-container-low/70 space-y-2">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Security Entropy Level:</span>
+<span class="font-bold text-outline" id="strength-label">Minimum standard required</span>
+</div>
+<!-- 4 Segment Progress Track -->
+<div class="grid grid-cols-4 gap-1.5 h-1.5 w-full">
+<div class="h-full rounded-full bg-outline-variant/40 transition-colors" id="bar-1"></div>
+<div class="h-full rounded-full bg-outline-variant/40 transition-colors" id="bar-2"></div>
+<div class="h-full rounded-full bg-outline-variant/40 transition-colors" id="bar-3"></div>
+<div class="h-full rounded-full bg-outline-variant/40 transition-colors" id="bar-4"></div>
+</div>
+<div class="flex flex-wrap gap-x-4 gap-y-1 font-body-sm text-body-sm text-outline pt-0.5">
+<span class="flex items-center space-x-1" id="rule-len">
+<span class="material-symbols-outlined text-sm">circle</span>
+<span>10+ chars</span>
+</span>
+<span class="flex items-center space-x-1" id="rule-num">
+<span class="material-symbols-outlined text-sm">circle</span>
+<span>1 Number</span>
+</span>
+<span class="flex items-center space-x-1" id="rule-special">
+<span class="material-symbols-outlined text-sm">circle</span>
+<span>1 Symbol (!@#$)</span>
+</span>
+</div>
+</div>
+</div>
+<!-- Legal & Clinical Telemetry Consents -->
+<div class="space-y-space-sm pt-2">
+<label class="flex items-start space-x-3 cursor-pointer group">
+<input class="mt-1 h-5 w-5 rounded text-primary focus:ring-primary focus:ring-offset-0 transition" id="consent-telemetry" required="" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface-variant group-hover:text-on-surface leading-snug">
+                  I expressly authorize CuraHealth to receive, aggregate, and decrypt biometric time-series data from connected sensors in strict compliance with 
+                  <a class="text-primary underline font-medium" href="#hipaa">HIPAA Clinical Security Rule 45 CFR</a>.
+                </span>
+</label>
+<label class="flex items-start space-x-3 cursor-pointer group">
+<input class="mt-1 h-5 w-5 rounded text-primary focus:ring-primary focus:ring-offset-0 transition" id="consent-terms" required="" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface-variant group-hover:text-on-surface leading-snug">
+                  I acknowledge and accept the <a class="text-primary underline font-medium" href="#terms">Terms of Clinical Practice</a> and 
+                  <a class="text-primary underline font-medium" href="#privacy">Decentralized Patient Consent Standard</a>.
+                </span>
+</label>
+</div>
+<!-- Submit Primary Button -->
+<div class="pt-space-md">
+<button class="w-full h-12 bg-primary hover:bg-primary-container text-on-primary font-title-md text-title-md rounded flex items-center justify-center space-x-space-sm shadow-md hover:shadow-lg transition-all active:scale-[0.99]" type="submit">
+<span>Authorize &amp; Initialize Secure Profile</span>
+<span class="material-symbols-outlined text-xl">verified</span>
+</button>
+</div>
+</form>
+</div>
+<!-- Footnote / Micro Guarantee -->
+<div class="mt-space-lg pt-space-md border-t-0 flex flex-col sm:flex-row items-center justify-between text-outline text-body-sm font-body-sm gap-2">
+<div class="flex items-center space-x-1.5">
+<span class="material-symbols-outlined text-base text-secondary">encrypted</span>
+<span>256-bit Hardware-Backed Quantum Vault</span>
+</div>
+<div class="flex items-center space-x-4">
+<a class="hover:text-primary transition-colors" href="#help">Clinical Support</a>
+<span>•</span>
+<a class="hover:text-primary transition-colors" href="#sla">Security Whitepaper</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Micro-Interactions Script -->
+<script>
+    (function initRegistrationLogic() {
+      // Elements
+      const pwdInput = document.getElementById('password-input');
+      const confirmInput = document.getElementById('confirm-password-input');
+      const toggleBtn = document.getElementById('toggle-password');
+      const matchIndicator = document.getElementById('match-indicator');
+      const strengthLabel = document.getElementById('strength-label');
+      const bar1 = document.getElementById('bar-1');
+      const bar2 = document.getElementById('bar-2');
+      const bar3 = document.getElementById('bar-3');
+      const bar4 = document.getElementById('bar-4');
+      const ruleLen = document.getElementById('rule-len');
+      const ruleNum = document.getElementById('rule-num');
+      const ruleSpecial = document.getElementById('rule-special');
+      const form = document.getElementById('cura-register-form');
+      const tabPatient = document.getElementById('tab-patient');
+      const tabClinician = document.getElementById('tab-clinician');
+
+      // Account Switcher
+      if (tabPatient && tabClinician) {
+        tabPatient.addEventListener('click', () => {
+          tabPatient.className = 'py-2 text-center rounded-lg font-label-md text-label-md transition-all bg-surface-container-lowest text-primary shadow-sm font-bold';
+          tabClinician.className = 'py-2 text-center rounded-lg font-label-md text-label-md transition-all text-on-surface-variant hover:text-on-surface';
+        });
+        tabClinician.addEventListener('click', () => {
+          tabClinician.className = 'py-2 text-center rounded-lg font-label-md text-label-md transition-all bg-surface-container-lowest text-primary shadow-sm font-bold';
+          tabPatient.className = 'py-2 text-center rounded-lg font-label-md text-label-md transition-all text-on-surface-variant hover:text-on-surface';
+        });
+      }
+
+      // Password Visibility Toggle
+      if (toggleBtn && pwdInput) {
+        toggleBtn.addEventListener('click', () => {
+          const isPassword = pwdInput.getAttribute('type') === 'password';
+          pwdInput.setAttribute('type', isPassword ? 'text' : 'password');
+          const icon = toggleBtn.querySelector('.material-symbols-outlined');
+          if (icon) icon.textContent = isPassword ? 'visibility_off' : 'visibility';
+        });
+      }
+
+      // Password Dynamic Strength Evaluator
+      if (pwdInput) {
+        pwdInput.addEventListener('input', () => {
+          const val = pwdInput.value;
+          let score = 0;
+
+          const hasLen = val.length >= 10;
+          const hasNum = /[0-9]/.test(val);
+          const hasSpecial = /[^A-Za-z0-9]/.test(val);
+          const hasUpperLower = /[A-Z]/.test(val) && /[a-z]/.test(val);
+
+          // Update checklist tags
+          updateRuleStatus(ruleLen, hasLen);
+          updateRuleStatus(ruleNum, hasNum);
+          updateRuleStatus(ruleSpecial, hasSpecial);
+
+          if (hasLen) score++;
+          if (hasNum) score++;
+          if (hasSpecial) score++;
+          if (hasUpperLower) score++;
+
+          // Clear bars
+          [bar1, bar2, bar3, bar4].forEach(b => {
+            b.className = 'h-full rounded-full bg-outline-variant/40 transition-colors';
+          });
+
+          if (score === 0) {
+            strengthLabel.textContent = 'Minimum standard required';
+            strengthLabel.className = 'font-bold text-outline';
+          } else if (score <= 2) {
+            bar1.className = 'h-full rounded-full bg-error transition-colors';
+            strengthLabel.textContent = 'Vulnerable Key Entropy';
+            strengthLabel.className = 'font-bold text-error';
+          } else if (score === 3) {
+            bar1.className = 'h-full rounded-full bg-amber-500 transition-colors';
+            bar2.className = 'h-full rounded-full bg-amber-500 transition-colors';
+            bar3.className = 'h-full rounded-full bg-amber-500 transition-colors';
+            strengthLabel.textContent = 'Clinical Baseline Standard';
+            strengthLabel.className = 'font-bold text-amber-600';
+          } else if (score >= 4) {
+            [bar1, bar2, bar3, bar4].forEach(b => {
+              b.className = 'h-full rounded-full bg-secondary transition-colors';
+            });
+            strengthLabel.textContent = 'Quantum-Grade Compliant';
+            strengthLabel.className = 'font-bold text-secondary';
+          }
+
+          checkMatch();
+        });
+      }
+
+      function updateRuleStatus(elem, valid) {
+        if (!elem) return;
+        const icon = elem.querySelector('.material-symbols-outlined');
+        if (valid) {
+          elem.classList.add('text-secondary');
+          elem.classList.remove('text-outline');
+          if (icon) icon.textContent = 'check_circle';
+        } else {
+          elem.classList.remove('text-secondary');
+          elem.classList.add('text-outline');
+          if (icon) icon.textContent = 'circle';
+        }
+      }
+
+      function checkMatch() {
+        if (!confirmInput || !pwdInput) return;
+        if (!confirmInput.value) {
+          matchIndicator.textContent = 'lock';
+          matchIndicator.classList.remove('text-secondary', 'text-error');
+          matchIndicator.classList.add('text-outline-variant');
+          return;
+        }
+        if (confirmInput.value === pwdInput.value) {
+          matchIndicator.textContent = 'check_circle';
+          matchIndicator.classList.remove('text-outline-variant', 'text-error');
+          matchIndicator.classList.add('text-secondary');
+        } else {
+          matchIndicator.textContent = 'error';
+          matchIndicator.classList.remove('text-outline-variant', 'text-secondary');
+          matchIndicator.classList.add('text-error');
+        }
+      }
+
+      if (confirmInput) {
+        confirmInput.addEventListener('input', checkMatch);
+      }
+
+      // Form validation & submission interaction
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          if (pwdInput.value !== confirmInput.value) {
+            alert('Security keys do not match. Please verify.');
+            return;
+          }
+          const submitBtn = form.querySelector('button[type="submit"]');
+          if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = `
+              <span class="inline-block animate-spin mr-2">⟳</span>
+              <span>Generating FHIR Identity...</span>
+            `;
+            setTimeout(() => {
+              submitBtn.innerHTML = `
+                <span class="material-symbols-outlined mr-2">check</span>
+                <span>Profile Vault Created! Redirecting...</span>
+              `;
+              submitBtn.classList.remove('bg-primary');
+              submitBtn.classList.add('bg-secondary');
+            }, 1200);
+          }
+        });
+      }
+    })();
+  </script>
+</div></main></body></html>

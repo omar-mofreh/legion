@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Meet the Legion AI-assisted care agent.">
+    <title>Legion | AI Care Agent</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <a class="brand" href="index.html"><img src="assets/logo.png" alt="" width="42" height="42"><span>Legion</span></a>
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="platform.html">Platform</a>
+
+            <a href="ai-agent.html">How it works</a>
+
+                <a href="platform.html#network">Care network </a><ahref="contact.html">Contact</a></nav>
+        <div class="header-actions">
+            <a class="button button-quiet" href="login.html">Sign in</a>
+            <aclass="button button-small" href="register.html">Get started <span aria-hidden="true">&#8599;</span></a>
+        </div><button class="menu-toggle" type="button" aria-label="Open menu">Menu</button>
+
+    </header>
+    <main>
+        <section class="page-hero section-shell">
+
+            <p class="eyebrow">AI-assisted care</p>
+
+            <h1>A better first conversation.</h1>
+
+            <p class="hero-lede">Tell Legion how you feel in your own words. The care agent organizes the details andhelps you choose the next step.</p>
+
+        </section>
+        <section class="section-shell agent-layout">
+
+
+            <div class="chat-panel">
+                <div class="chat-header">
+                    <span class="status-dot"></span>
+
+                    <div><strong>Legion care agent</strong><small>Clinical context assistant</small></div>
+
+                    <spanclass="chat-badge">Online</span>
+                </div>
+                <div class="chat-messages">
+
+                    <div class="message agent-message">Hello, Alexander. What would you like help understanding
+
+                        today?<small>09:41 AM</small></div>
+
+                    <div class="message user-message">I felt a flutter in my chest after my run. It has settled
+
+                        now.<small>09:42 AM</small></div>
+
+                    <div class="message agent-message">Thanks for sharing that. I can compare it with your recent
+                        signals and prepare a focused summary for your care team.<small>09:42 AM</small></div>
+                </div>
+                <form class="chat-form" id="chat-form"><input id="chat-input" type="text" required placeholder="Describe a symptom or ask a question">
+
+                        <button class="button" type="submit">Send
+                        <span aria-hidden="true">&#8594;</span>
+                </button></form>
+
+                <p class="form-status" id="chat-status" role="status"></p>
+
+
+            </div>
+            <aside class="agent-aside">
+
+                <div class="eyebrow">What it does</div>
+
+                <h2>Context, not conclusions.</h2>
+
+                <p>The agent helps you express symptoms clearly and prepares useful context for a qualified clinician. It does not diagnose emergencies.</p>
+
+                <div class="mini-stat">
+
+                <div class="mini-stat">
+                <a class="button"href="contact.html">Talk to a care team <span aria-hidden="true">&#8594;</span></a>
+            </aside>
+        </section>
+    </main>
+    <footer class="site-footer">
+
+        <div class="section-shell footer-inner">
+<a class="brand" href="index.html"><img src="assets/logo.png" alt="" width="36" height="36"><span>Legion</span></a>
+
+            <p>Better signals. Better conversations. Better care.</p>
+
+            <span class="footer-note">(c) 2026 Legion</span>
+
+        </div>
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
