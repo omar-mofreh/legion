@@ -1,6 +1,6 @@
 # Legion: Health-tech website
 
-<mark>✏️ Student writes: one line saying what this document is for, e.g. the event or class, and the year.</mark>
+Project documentation for the Legion website, 2026. By Omar Mofreh (Malek).
 
 <p align="center"><img src="assets/logo.png" alt="Legion logo" width="320"></p>
 
@@ -12,8 +12,8 @@
 |-------|-------|
 | **Project Title** | Legion: Health-tech website |
 | **Project Type** | Static website (no database, no server code) |
-| **Description** | <mark>✏️ Student writes: 2–3 sentences. What is Legion and what can people do on the site?</mark> |
-| **Target Users** | <mark>✏️ Student writes: who is the site for? (patients, clinicians, …)</mark> |
+| **Description** | Legion is a website for a made-up health-tech company. Visitors can read about the platform, try a demo of the AI care agent chat, send a message to the team, and open sign-in and register forms. |
+| **Target Users** | Patients who want a clear view of their health data, and the clinicians and care teams who look after them. |
 | **Live site** | <https://omar-mofreh.github.io/legion/> |
 
 ### Tech Stack | التقنيات المستخدمة
@@ -31,15 +31,15 @@ There is nothing to install. The site uses no framework and no package manager. 
 
 ## 2. Problem Statement | المشكلة
 
-<mark>✏️ Student writes: 2–3 sentences. What problem does Legion solve? Who has this problem?</mark>
+Health data is scattered across devices and records, so patients cannot see the whole picture and clinicians start visits without context. Legion shows one connected picture.
 
 ### Why does it matter? | لماذا هذا مهم؟
 
-<mark>✏️ Student writes: 2–3 sentences. What happens to people when this problem isn't solved?</mark>
+Patients are left to explain symptoms from memory, and care teams miss trends that could help them act sooner.
 
 ### How is it currently solved? | كيف تُحل المشكلة حاليًا؟
 
-<mark>✏️ Student writes: 2–3 sentences. What do people use today, and what is still hard about it?</mark>
+People use separate apps, wearables and paper records. Each one shows only a piece, and none of them prepares a short summary for the clinician.
 
 ## 3. Technical Architecture | البنية التقنية
 
@@ -156,47 +156,47 @@ These shortcuts were taken on purpose to keep the code simple. The full list is 
 
 Through building this project, a student can practice:
 
-1. <mark>✏️ Student writes: something you learned about HTML pages</mark>
-2. <mark>✏️ Student writes: something you learned about CSS and layout</mark>
-3. <mark>✏️ Student writes: something you learned about JavaScript and forms</mark>
-4. <mark>✏️ Student writes: something you learned about making a site work on a phone</mark>
-5. <mark>✏️ Student writes: one more thing you learned</mark>
+1. Writing a page with clear sections: header, main content and footer.
+2. Using grids, one set of colour variables and two @media rules so the site fits tablets and phones.
+3. Using one small script that looks for a form by its id and shows a friendly message.
+4. Turning the menu into a Menu button on small screens.
+5. Keeping code simple enough that every file can be read on its own.
 
 ### Curriculum Alignment | الارتباط بالمنهج
 
 | Skill Area | What the Student Practices |
 |------------|---------------------------|
-| Problem Solving | <mark>✏️ Student writes: 1 sentence</mark> |
-| Computational Thinking | <mark>✏️ Student writes: 1 sentence</mark> |
-| Creativity | <mark>✏️ Student writes: 1 sentence</mark> |
-| Collaboration | <mark>✏️ Student writes: 1 sentence, or "built alone"</mark> |
-| Technical Writing | <mark>✏️ Student writes: 1 sentence</mark> |
+| Problem Solving | Finding a simple way to show a health platform without a backend. |
+| Computational Thinking | Breaking the site into pages, shared styles and one shared script. |
+| Creativity | Designing a calm look and a sample health dashboard from the logo's colours. |
+| Collaboration | Built by Omar Mofreh with the Malek team. |
+| Technical Writing | Writing the README, its Limits section and this documentation. |
 
 ## 8. Marketing Plan | خطة تسويقية
 
-- **Primary audience:** <mark>✏️ Student writes: the main group of people</mark>
-- **Secondary audience:** <mark>✏️ Student writes: a second group</mark>
-- **Where people will use it:** <mark>✏️ Student writes: e.g. phone and desktop browsers</mark>
-- **Where you will show it or share it:** <mark>✏️ Student writes</mark>
+- **Primary audience:** Patients who track their own health.
+- **Secondary audience:** Clinicians, hospitals and clinics that want connected care.
+- **Where people will use it:** Phone and desktop browsers.
+- **Where it is shared:** The live site on GitHub Pages, with the QR code on the poster and slides.
 
 ## 9. Student Worksheet | ورقة عمل الطالب
 
-**Student Name:** <mark>✏️ Student writes: your full name</mark>  
+**Student Name:** Omar Mofreh  
 **Project Title:** Legion: Health-tech website
 
 ### What is your project about? | عن ماذا يتحدث مشروعك؟
 
-<mark>✏️ Student writes: 1–2 sentences in your own words</mark>
+Legion is a website for a health-tech company. It shows how health signals, an AI care agent and care teams can work together.
 
 ### What problem does it solve? | ما المشكلة التي يحلها؟
 
-<mark>✏️ Student writes: 1–2 sentences in your own words</mark>
+Health data is scattered, so patients and clinicians do not see one clear picture. The site shows how Legion would fix that.
 
 ### What I Learned | ماذا تعلمت
 
-1. **The hardest part:** <mark>✏️ Student writes</mark>
-2. **The most fun part:** <mark>✏️ Student writes</mark>
-3. **If I had more time:** <mark>✏️ Student writes</mark>
+1. **The hardest part:** Making the layout work on tablets and phones.
+2. **The most fun part:** Building the sample health dashboard card.
+3. **If I had more time:** Connect the forms to a real service.
 
 ### Screenshot of My Project | لقطة من مشروعي
 
@@ -204,4 +204,4 @@ Through building this project, a student can practice:
 
 ---
 
-<mark>✏️ Student writes: team or school name · event · year</mark>
+Omar Mofreh · Malek · 2026
