@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Legion Poster</title>
+<!-- Printed size: 1000 x 2000 mm, plus 5 mm extra on each edge for trimming. Build the PDF with: python docs/build.py poster -->
+<!-- Boxes with class="todo" are for the student to write. Replace the whole <span class="todo">…</span> with your words. -->
+<link rel="stylesheet" href="../assets/brand.css">
+<style>
+  @page { size: 1010mm 2010mm; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--paper); }
+  body { -webkit-print-color-adjust: exact; print-color-adjust: exact; font-family: var(--sans); color: var(--ink); }
+  .poster { position: relative; width: 1010mm; height: 2010mm; overflow: hidden; background: var(--paper);
+            background-image:
+              linear-gradient(rgba(6,59,81,0.035) 0.6mm, transparent 0.6mm),
+              linear-gradient(90deg, rgba(6,59,81,0.035) 0.6mm, transparent 0.6mm);
+            background-size: 20mm 20mm; }
+
+  /* ---------- hero (read from far away) ---------- */
+  .hero { position: absolute; left: 0; top: 0; width: 1010mm; height: 455mm; background: var(--ink); overflow: hidden; }
+  .hero .texture { position: absolute; inset: 0; padding: 12mm 18mm; display: flex; flex-wrap: wrap; align-content: flex-start;
+                   justify-content: space-between; column-gap: 14mm; row-gap: 4mm; color: var(--accent); opacity: 0.10; }
+  .hero .texture span { font-size: 30mm; line-height: 1.4; }
+  .hero .texture .en { font-family: var(--display); }
+  .hero .texture .ar { font-family: var(--arabic); font-weight: 700; font-size: 32mm; }
+  .hero .glow { position: absolute; right: 40mm; top: 35mm; width: 380mm; height: 380mm; border-radius: 50%;
+                background: radial-gradient(circle, rgba(25,185,157,0.42) 0%, rgba(7,90,120,0.14) 52%, rgba(7,90,120,0) 72%); }
+  .hero .mark { position: absolute; left: 665mm; top: 75mm; width: 300mm; height: 300mm; padding: 14mm; background: var(--paper); border-radius: 46mm;
+               box-shadow: 0 0 0 4mm rgba(25,185,157,0.35); }
+  .hero .text { position: absolute; left: 60mm; top: 100mm; width: 580mm; }
+  .hero .kicker { font-family: var(--mono); font-weight: 700; font-size: 14mm; letter-spacing: 0.22em; color: var(--accent); text-transform: uppercase; }
+  .hero h1 { font-family: var(--display); font-weight: 700; font-size: 84mm; line-height: 1; color: var(--paper);
+             margin: 16mm 0 14mm -2mm; letter-spacing: -0.02em; white-space: nowrap; }
+  .hero h1 .dot { color: var(--accent); }
+  .hero .tagline { font-family: var(--display); font-size: 40mm; line-height: 1.05; color: var(--accent); }
+  .hero .promise { font-size: 19mm; line-height: 1.32; color: var(--paper); opacity: 0.94; margin-top: 14mm; max-width: 560mm; }
+  .hero .todo { font-family: var(--sans); font-size: 15mm; line-height: 1.45; font-weight: 500; }
+
+  /* a row of "pixels" between the dark top and the light body */
+  .band { position: absolute; left: 0; top: 455mm; width: 1010mm; height: 20mm;
+          background:
+            linear-gradient(90deg, var(--accent) 50%, var(--ink) 50%) 0 0 / 20mm 10mm repeat-x,
+            linear-gradient(90deg, var(--ink) 50%, var(--accent) 50%) 0 10mm / 20mm 10mm repeat-x; }
+
+  /* ---------- body (read up close) ---------- */
+  .body { position: absolute; left: 35mm; top: 510mm; width: 940mm; }
+  h2 { font-family: var(--sans); font-weight: 700; font-size: 40mm; line-height: 1.05; color: var(--ink); margin-bottom: 10mm; letter-spacing: -0.02em; }
+  h2 .num { font-family: var(--display); font-weight: 400; font-size: 13mm; color: var(--accent-dark); letter-spacing: 0.08em; margin-right: 8mm; vertical-align: 0.45em; }
+  h2 .ar { font-size: 16mm; font-weight: 600; color: var(--ink-soft); margin-left: 6mm; vertical-align: 0.3em; }
+  h2 .todo { font-size: 17mm; font-weight: 500; vertical-align: 0.35em; letter-spacing: 0; }
+  section { margin-bottom: 24mm; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 20mm; }
+  .card { background: var(--white); border: 0.8mm solid var(--line); border-radius: 6mm; padding: 14mm 16mm; }
+  .card.hot { border: 1.2mm solid var(--accent); background: #EDF9F6; }
+  .card h3 { font-size: 17mm; font-weight: 700; margin-bottom: 6mm; }
+  .card p { font-size: 12.5mm; line-height: 1.4; color: var(--ink-soft); }
+  .label { font-family: var(--mono); font-weight: 700; font-size: 9mm; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent-dark); margin-bottom: 4mm; }
+
+  .demo { display: grid; grid-template-columns: 560mm 1fr; gap: 18mm; align-items: start; }
+  .shot { border: 0.8mm solid rgba(6,59,81,0.25); border-radius: 5mm; overflow: hidden; background: #fff; }
+  .shot img { display: block; width: 100%; object-fit: cover; object-position: top left; }
+  .demo .shot img { height: 330mm; object-position: 22% top; }
+  .caption { font-size: 10mm; color: var(--ink-soft); margin-top: 5mm; line-height: 1.35; }
+  ul.features { list-style: none; display: grid; gap: 7.5mm; }
+  ul.features li { display: flex; gap: 6mm; align-items: flex-start; }
+  ul.features .dot { flex: none; width: 7mm; height: 7mm; margin-top: 3.5mm; background: var(--accent); }
+  ul.features strong { font-size: 13mm; font-weight: 700; display: block; }
+  ul.features span.d { font-size: 10.5mm; color: var(--ink-soft); line-height: 1.3; display: block; margin-top: 1mm; }
+  .thumbs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14mm; margin-top: 14mm; }
+  .thumbs .shot img { height: 172mm; object-position: 30% top; }
+  .thumbs .caption { margin-top: 3mm; }
+
+  .how { display: grid; grid-template-columns: 1fr 1fr; gap: 16mm; }
+  .how .card { padding: 11mm 12mm 12mm; }
+  .how img { display: block; width: 100%; border-radius: 3mm; }
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16mm; margin-top: 16mm; }
+  .stat { border-top: 1.2mm solid var(--ink); padding-top: 5mm; }
+  .stat b { font-family: var(--display); font-size: 40mm; line-height: 1; color: var(--accent); display: block; }
+  .stat span { font-size: 11mm; color: var(--ink-soft); line-height: 1.3; }
+
+  .foot { position: absolute; left: 35mm; top: 1800mm; width: 940mm; border-top: 0.8mm solid var(--ink);
+          padding-top: 10mm; display: flex; justify-content: space-between; align-items: flex-start; }
+  .chips { display: flex; gap: 4mm; margin: 4mm 0 9mm; }
+  .chips span { font-family: var(--mono); font-size: 10mm; border: 0.6mm solid var(--ink); padding: 1.5mm 4mm; background: #fff; }
+  .who { font-size: 15mm; font-weight: 700; }
+  .who .todo { font-size: 11mm; font-weight: 500; }
+  .meta { font-size: 11mm; margin-top: 3mm; color: var(--ink-soft); }
+  .meta .todo { font-size: 10mm; }
+  .note { font-size: 10mm; color: var(--accent-dark); margin-top: 6mm; font-family: var(--mono); }
+  .qr { text-align: center; }
+  .qr .code { background: #fff; padding: 4mm; border: 0.8mm solid var(--ink); display: inline-block; }
+  .qr img { display: block; width: 120mm; height: 120mm; image-rendering: pixelated; }
+  .qr p { font-family: var(--mono); font-size: 8.5mm; color: var(--ink-soft); margin-top: 4mm; line-height: 1.4; }
+  .qr p b { color: var(--ink); }
+</style>
+</head>
+<body>
+<div class="poster">
+
+  <div class="hero">
+    <div class="texture">
+      <span class="en">PULSE</span><span class="ar">نبض</span>
+      <span class="en">HEART</span><span class="ar">قلب</span>
+      <span class="en">SLEEP</span><span class="ar">نوم</span>
+      <span class="en">STEPS</span><span class="ar">خطوات</span>
+      <span class="en">OXYGEN</span><span class="ar">أكسجين</span>
+      <span class="en">CARE</span><span class="ar">رعاية</span>
+      <span class="en">SIGNAL</span><span class="ar">إشارة</span>
+      <span class="en">HEALTH</span><span class="ar">صحة</span>
+      <span class="en">DOCTOR</span><span class="ar">طبيب</span>
+      <span class="en">DATA</span><span class="ar">بيانات</span>
+      <span class="en">TEAM</span><span class="ar">فريق</span>
+      <span class="en">CHAT</span><span class="ar">محادثة</span>
+      <span class="en">PULSE</span><span class="ar">نبض</span>
+      <span class="en">HEART</span><span class="ar">قلب</span>
+      <span class="en">SLEEP</span><span class="ar">نوم</span>
+      <span class="en">STEPS</span><span class="ar">خطوات</span>
+      <span class="en">OXYGEN</span><span class="ar">أكسجين</span>
+      <span class="en">CARE</span><span class="ar">رعاية</span>
+    </div>
+    <div class="glow"></div>
+    <img class="mark" src="../assets/mark.svg" alt="Legion mark">
+    <div class="text">
+      <div class="kicker">HEALTH TECH · WEBSITE</div>
+      <h1>Legi<span class="dot">o</span>n</h1>
+      <div class="tagline"><span class="todo">a short tagline, 2–4 words</span></div>
+      <p class="promise"><span class="todo">one or two sentences: what can someone do with Legion?</span></p>
+    </div>
+  </div>
+  <div class="band"></div>
+
+  <div class="body">
+    <section>
+      <h2><span class="num">01 · WHY</span><span class="todo">a headline about the problem</span></h2>
+      <div class="two">
+        <div class="card">
+          <div class="label">The problem <span class="ar">المشكلة</span></div>
+          <h3><span class="todo">the problem in 3–5 words</span></h3>
+          <p><span class="todo">2–3 sentences: who has this problem, and what is hard for them today?</span></p>
+        </div>
+        <div class="card hot">
+          <div class="label">Our solution <span class="ar">الحل</span></div>
+          <h3><span class="todo">the solution in 3–5 words</span></h3>
+          <p><span class="todo">2–3 sentences: how does Legion fix it?</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2><span class="num">02 · SEE IT</span>From signals to care.<span class="ar">من الإشارات إلى الرعاية</span></h2>
+      <div class="demo">
+        <div>
+          <div class="shot"><img src="../screenshots/home.jpg" alt="Home page"></div>
+          <p class="caption">Home: the headline, three short facts, and a sample health dashboard with pulse, oxygen, steps and sleep.</p>
+        </div>
+        <ul class="features">
+          <li><span class="dot"></span><div><strong>A health dashboard</strong><span class="d">A sample card with pulse, oxygen, steps and sleep.</span></div></li>
+          <li><span class="dot"></span><div><strong>A platform page</strong><span class="d">Three feature cards, a calm workflow and care-network numbers.</span></div></li>
+          <li><span class="dot"></span><div><strong>An AI care agent</strong><span class="d">Describe how you feel in a chat and get a note that it was received.</span></div></li>
+          <li><span class="dot"></span><div><strong>A contact form</strong><span class="d">Name, email and message, with a thank-you note.</span></div></li>
+          <li><span class="dot"></span><div><strong>Sign in and register</strong><span class="d">Forms with a Show/Hide password button.</span></div></li>
+          <li><span class="dot"></span><div><strong>Works on a phone</strong><span class="d">A Menu button opens the links on small screens.</span></div></li>
+        </ul>
+      </div>
+      <div class="thumbs">
+        <div><div class="shot"><img src="../screenshots/platform.jpg" alt="Platform page"></div><p class="caption">Platform: what Legion does.</p></div>
+        <div><div class="shot"><img src="../screenshots/ai-agent.jpg" alt="AI agent page"></div><p class="caption">AI agent: a chat demo.</p></div>
+        <div><div class="shot"><img src="../screenshots/register.jpg" alt="Register page"></div><p class="caption">Register: a demo account form.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2><span class="num">03 · HOW</span>Plain HTML, plain CSS.<span class="ar">HTML و CSS ببساطة</span></h2>
+      <div class="how">
+        <div class="card">
+          <div class="label">How a visitor moves</div>
+          <img src="../diagrams/flow.png" alt="Visitor flow diagram">
+        </div>
+        <div class="card">
+          <div class="label">How every page is built</div>
+          <img src="../diagrams/site-map.png" alt="Site map diagram">
+        </div>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>0</b><span>libraries to install: just HTML, CSS and JavaScript</span></div>
+        <div class="stat"><b>6</b><span>pages, one .html file for each</span></div>
+        <div class="stat"><b>4</b><span>demo forms: sign in, register, contact and chat</span></div>
+        <div class="stat"><b>53</b><span>lines in the one script that every page shares</span></div>
+      </div>
+    </section>
+  </div>
+
+  <div class="foot">
+    <div>
+      <div class="label">Built with</div>
+      <div class="chips"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+      <div class="who"><span class="todo">your name · team or school</span></div>
+      <div class="meta"><span class="todo">event name and year · your email</span></div>
+      <div class="note">A school demo: the forms are pretend and nothing is saved or sent.</div>
+    </div>
+    <div class="qr">
+      <div class="code"><img src="../assets/qr-app.svg" alt="QR code for omar-mofreh.github.io/legion"></div>
+      <p>Scan to try it<br><b>omar-mofreh.github.io/legion</b></p>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

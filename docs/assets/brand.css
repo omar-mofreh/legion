@@ -1,0 +1,42 @@
+/* Legion brand: colours and fonts shared by the poster, slides, diagrams and documentation.
+   Colours come from the logo (deep blue + teal) and the site's own styles.css.
+   Diagrams also use these hex values directly in SVG attributes, so change the same
+   hex strings in docs/diagrams/*.html if you change them here:
+   #063B51 ink · #19B99D accent · #138671 accent-dark · #075A78 warm · #1AA58C warm-2 · #F7FAF7 paper */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=IBM+Plex+Sans+Arabic:wght@400;600;700&display=swap');
+
+:root {
+  --ink: #063B51;        /* darkest logo colour: text and the dark hero */
+  --ink-2: #0B4D68;
+  --ink-soft: #3F5B66;
+  --accent: #19B99D;     /* the logo's teal */
+  --accent-dark: #138671;
+  --warm: #075A78;       /* second brand colour, e.g. the app's banner */
+  --warm-2: #1AA58C;
+  --paper: #F7FAF7;      /* lightest logo colour: page background */
+  --white: #FFFFFF;
+  --line: rgba(6, 59, 81, 0.14);
+  --todo-bg: #FFF1A8;    /* student placeholder highlight */
+  --todo-line: #D9A400;
+
+  --display: 'Space Grotesk', system-ui, sans-serif;   /* the same heading font as the website */
+  --sans: 'Space Grotesk', system-ui, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, monospace;
+  --arabic: 'IBM Plex Sans Arabic', sans-serif;
+}
+
+.ar { font-family: var(--arabic); direction: rtl; unicode-bidi: isolate; }
+
+/* Student placeholder: anything in this style still has to be written before printing. */
+.todo {
+  background: var(--todo-bg);
+  color: #4A3B00;
+  border: 0.18em dashed var(--todo-line);
+  border-radius: 0.35em;
+  padding: 0.12em 0.4em;
+  font-style: normal;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+.todo::before { content: "✏️ Student writes: "; font-weight: 700; }
+.todo.block { display: block; padding: 0.5em 0.7em; }

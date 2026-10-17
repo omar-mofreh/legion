@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Legion Flow</title>
+<!-- How a visitor moves through the site, and what happens when a form is sent. The .canvas size is the PNG size. -->
+<link rel="stylesheet" href="../assets/brand.css">
+<style>
+  html, body { margin: 0; background: var(--white); }
+  .canvas { width: 1600px; height: 900px; }
+  svg { display: block; }
+  .chip { font: 700 13px var(--mono); letter-spacing: 0.12em; }
+  .title { font: 600 25px var(--sans); fill: var(--ink); }
+  .sub { font: 400 16px var(--mono); fill: var(--ink-soft); }
+  .lane { font: 700 14px var(--mono); letter-spacing: 0.16em; fill: var(--ink-soft); }
+  .small { font: 500 15px var(--mono); fill: var(--ink-soft); }
+  .row { font: 500 18px var(--sans); fill: var(--ink); }
+  .row-code { font: 500 16px var(--mono); fill: var(--accent-dark); }
+  .state { font: 700 22px var(--mono); }
+</style>
+</head>
+<body>
+<div class="canvas">
+<svg width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#063B51"/>
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#138671"/>
+    </marker>
+  </defs>
+
+  <!-- lane 1: the visitor's pages -->
+  <rect x="20" y="20" width="1560" height="470" rx="18" fill="#F7F8FA" stroke="rgba(6,59,81,0.10)" stroke-width="2"/>
+  <text x="48" y="58" class="lane">VISITOR · FROM HOME TO HELLO</text>
+
+  <g>
+    <rect x="50" y="90" width="260" height="120" rx="12" fill="#fff" stroke="#063B51" stroke-width="2.5"/>
+    <rect x="70" y="106" width="86" height="24" rx="5" fill="none" stroke="#3F5B66" stroke-width="1.5"/>
+    <text x="113" y="123" class="chip" fill="#3F5B66" text-anchor="middle">SCREEN</text>
+    <text x="180" y="165" class="title" text-anchor="middle">Home</text>
+    <text x="180" y="192" class="sub" text-anchor="middle">hero · 3 feature cards</text>
+  </g>
+  <g>
+    <rect x="360" y="90" width="260" height="120" rx="12" fill="#fff" stroke="#063B51" stroke-width="2.5"/>
+    <rect x="380" y="106" width="86" height="24" rx="5" fill="none" stroke="#3F5B66" stroke-width="1.5"/>
+    <text x="423" y="123" class="chip" fill="#3F5B66" text-anchor="middle">SCREEN</text>
+    <text x="490" y="165" class="title" text-anchor="middle">Platform</text>
+    <text x="490" y="192" class="sub" text-anchor="middle">timeline · workflow</text>
+  </g>
+  <g>
+    <rect x="670" y="90" width="260" height="120" rx="12" fill="#fff" stroke="#063B51" stroke-width="2.5"/>
+    <rect x="690" y="106" width="86" height="24" rx="5" fill="none" stroke="#3F5B66" stroke-width="1.5"/>
+    <text x="733" y="123" class="chip" fill="#3F5B66" text-anchor="middle">SCREEN</text>
+    <text x="800" y="165" class="title" text-anchor="middle">AI agent</text>
+    <text x="800" y="192" class="sub" text-anchor="middle">chat demo · Send</text>
+  </g>
+  <g>
+    <rect x="980" y="90" width="260" height="120" rx="12" fill="#fff" stroke="#063B51" stroke-width="2.5"/>
+    <rect x="1000" y="106" width="86" height="24" rx="5" fill="none" stroke="#3F5B66" stroke-width="1.5"/>
+    <text x="1043" y="123" class="chip" fill="#3F5B66" text-anchor="middle">SCREEN</text>
+    <text x="1110" y="165" class="title" text-anchor="middle">Contact</text>
+    <text x="1110" y="192" class="sub" text-anchor="middle">name · email · message</text>
+  </g>
+  <g>
+    <rect x="1290" y="90" width="260" height="120" rx="12" fill="#fff" stroke="#063B51" stroke-width="2.5"/>
+    <rect x="1310" y="106" width="86" height="24" rx="5" fill="none" stroke="#3F5B66" stroke-width="1.5"/>
+    <text x="1353" y="123" class="chip" fill="#3F5B66" text-anchor="middle">SCREEN</text>
+    <text x="1420" y="165" class="title" text-anchor="middle">Sign in · Register</text>
+    <text x="1420" y="192" class="sub" text-anchor="middle">demo account forms</text>
+  </g>
+
+  <line x1="312" y1="150" x2="356" y2="150" stroke="#063B51" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="622" y1="150" x2="666" y2="150" stroke="#063B51" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="932" y1="150" x2="976" y2="150" stroke="#063B51" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="1242" y1="150" x2="1286" y2="150" stroke="#063B51" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="334" y="80" class="small" text-anchor="middle">explore</text>
+  <text x="644" y="80" class="small" text-anchor="middle">ask</text>
+  <text x="954" y="80" class="small" text-anchor="middle">reach out</text>
+  <text x="1264" y="80" class="small" text-anchor="middle">join</text>
+
+  <!-- what every page shares, under Home and Platform -->
+  <rect x="50" y="260" width="570" height="200" rx="12" fill="#fff" stroke="rgba(6,59,81,0.25)" stroke-width="2" stroke-dasharray="7 6"/>
+  <text x="70" y="292" class="lane">EVERY PAGE HAS ITS OWN COPY OF</text>
+  <text x="70" y="330" class="row">The header: logo, menu, Sign in</text>
+  <text x="600" y="330" class="row-code" text-anchor="end">.site-header</text>
+  <text x="70" y="360" class="row">The phone “Menu” button</text>
+  <text x="600" y="360" class="row-code" text-anchor="end">.is-open</text>
+  <text x="70" y="390" class="row">The look: all colours in one place</text>
+  <text x="600" y="390" class="row-code" text-anchor="end">styles.css :root</text>
+  <text x="70" y="420" class="row">The footer</text>
+  <text x="600" y="420" class="row-code" text-anchor="end">.site-footer</text>
+  <text x="70" y="450" class="row">The behaviour: one file for all pages</text>
+  <text x="600" y="450" class="row-code" text-anchor="end">script.js</text>
+
+  <!-- the chat, under AI agent -->
+  <rect x="670" y="260" width="260" height="200" rx="12" fill="#fff" stroke="rgba(6,59,81,0.25)" stroke-width="2" stroke-dasharray="7 6"/>
+  <text x="690" y="292" class="lane">CHAT</text>
+  <text x="690" y="332" class="row">✍️ You type</text>
+  <text x="910" y="332" class="row-code" text-anchor="end">#chat-input</text>
+  <text x="690" y="372" class="row">➡️ Send</text>
+  <text x="910" y="372" class="row-code" text-anchor="end">submit</text>
+  <text x="690" y="412" class="row">💬 Message</text>
+  <text x="910" y="412" class="row-code" text-anchor="end">#chat-status</text>
+  <text x="690" y="444" class="small">no real agent answers</text>
+  <line x1="800" y1="212" x2="800" y2="256" stroke="#3F5B66" stroke-width="2" stroke-dasharray="5 5" marker-end="url(#arrow)"/>
+
+  <!-- what script.js does on submit, under Contact and Sign in -->
+  <rect x="980" y="260" width="570" height="200" rx="12" fill="#fff" stroke="#19B99D" stroke-width="2" stroke-dasharray="7 6"/>
+  <text x="1000" y="292" class="lane">WHEN YOU PRESS SEND (script.js)</text>
+  <text x="1000" y="330" class="row">1  keep the page from reloading</text>
+  <text x="1530" y="330" class="row-code" text-anchor="end">preventDefault()</text>
+  <text x="1000" y="360" class="row">2  clear the box (contact, chat)</text>
+  <text x="1530" y="360" class="row-code" text-anchor="end">reset()</text>
+  <text x="1000" y="390" class="row">3  write a friendly message</text>
+  <text x="1530" y="390" class="row-code" text-anchor="end">textContent</text>
+  <text x="1000" y="420" class="row">4  save or send anything</text>
+  <text x="1530" y="420" class="row-code" text-anchor="end">nothing</text>
+  <text x="1000" y="450" class="small">Every form on the site is a demo.</text>
+  <line x1="1110" y1="212" x2="1110" y2="256" stroke="#138671" stroke-width="2.5" marker-end="url(#arrow-red)"/>
+
+  <!-- lane 2: what a form goes through -->
+  <rect x="20" y="540" width="1560" height="340" rx="18" fill="#F7F8FA" stroke="rgba(6,59,81,0.10)" stroke-width="2"/>
+  <text x="48" y="578" class="lane">A FORM, STEP BY STEP</text>
+
+  <rect x="350" y="620" width="260" height="70" rx="35" fill="#E3F6F1" stroke="#075A78" stroke-width="3"/>
+  <text x="480" y="663" class="state" fill="#075A78" text-anchor="middle">filled in</text>
+  <rect x="750" y="620" width="260" height="70" rx="35" fill="#E3F6F1" stroke="#1AA58C" stroke-width="3"/>
+  <text x="880" y="663" class="state" fill="#0B6B5B" text-anchor="middle">submitted</text>
+  <rect x="1150" y="620" width="260" height="70" rx="35" fill="#E9F7EE" stroke="#1E8E4E" stroke-width="3"/>
+  <text x="1280" y="663" class="state" fill="#16673A" text-anchor="middle">message shown</text>
+  <rect x="750" y="770" width="260" height="70" rx="35" fill="#F7FAF7" stroke="#3F5B66" stroke-width="3"/>
+  <text x="880" y="813" class="state" fill="#3F5B66" text-anchor="middle">stopped</text>
+
+  <line x1="612" y1="655" x2="746" y2="655" stroke="#063B51" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="1012" y1="655" x2="1146" y2="655" stroke="#063B51" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <path d="M480,692 V805 H746" fill="none" stroke="#3F5B66" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="679" y="640" class="small" text-anchor="middle">press Send</text>
+  <text x="1079" y="640" class="small" text-anchor="middle">script.js</text>
+  <text x="500" y="793" class="small">empty or invalid box</text>
+
+  <text x="48" y="860" class="small">The browser checks the boxes first (required, email, 8-letter password). Only a good form reaches script.js.</text>
+  <text x="1150" y="790" class="small">The message appears under the form.</text>
+  <text x="1150" y="814" class="small">Nothing is saved anywhere.</text>
+</svg>
+</div>
+</body>
+</html>
