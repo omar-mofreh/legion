@@ -1,10 +1,11 @@
 # Legion: Health-tech website
 
-Project documentation for the Legion website, 2026. By Omar Mofreh (Malek).
+Project documentation for the Legion website, for the Afro-Asian Forum for Innovation and Technology (AFFIAT), Aswan Finals 2026. By Omar Mofreh (Malek).
+
+<p align="center"><img src="assets/partners.png" alt="AFFIAT and Techno Future Kafr El Sheikh" width="320"></p>
 
 <p align="center"><img src="assets/logo.png" alt="Legion logo" width="320"></p>
 
-> **How to use this document:** every yellow <mark>✏️</mark> box is yours to fill in. Everything else was taken from the code. When you are done, run `python docs/build.py` to rebuild the PDF, the poster and the slides.
 
 ## 1. Project Overview | نظرة عامة على المشروع
 
